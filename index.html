@@ -52,7 +52,7 @@ h3{font-size:clamp(24px,2.4vw,30px)}
 .site-nav nav a.give{background:var(--gold);color:#fff;padding:8px 18px;border-radius:999px}
 @media(max-width:720px){.site-nav nav a:not(.give){display:none}}
 .opening{background:var(--paper);padding:clamp(80px,11vw,140px) 0 clamp(70px,9vw,110px);text-align:center}
-.opening .kicker{font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--navy);margin:0}
+.opening .kicker{font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--navy-dk);margin:0}
 .opening .kicker span{color:var(--gold-dk)}
 .opening blockquote{margin:0 auto;max-width:820px;font-size:clamp(30px,4.2vw,50px);line-height:1.22;color:var(--navy);font-weight:300}
 .opening blockquote cite{display:block;font-style:normal;font-family:var(--sans);font-size:14px;letter-spacing:.16em;color:var(--gold-dk);margin-top:26px;font-weight:600}
@@ -68,6 +68,8 @@ h3{font-size:clamp(24px,2.4vw,30px)}
 .proclaim .qf{font-family:var(--script);font-weight:400;text-transform:none;letter-spacing:0;color:var(--gold);font-size:1.6em;margin:0 .25em;vertical-align:-.08em}
 .hero .actions{margin-top:42px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
 .letter-grid{display:grid;grid-template-columns:1fr;gap:48px}
+.letter-grid .video{width:100%;max-width:960px;margin:0 auto}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .video{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#000;box-shadow:0 30px 60px -20px rgba(30,25,15,.45)}
 .video img{width:100%;height:100%;object-fit:cover;opacity:.72}
 .video .play{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;color:#fff;gap:16px;text-align:center;padding:20px}
@@ -123,6 +125,7 @@ a.pod .listen{display:inline-block;font-family:var(--sans);font-weight:600;font-
 .pod p{margin:0 0 10px;font-size:17.5px}
 .pod .new{display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.14em;color:#fff;background:#B5432F;padding:3px 9px;border-radius:999px;margin-left:8px;vertical-align:4px}
 .split{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,64px);align-items:center}
+.banner a{display:block}
 .banner{border-radius:16px;overflow:hidden;box-shadow:0 26px 50px -24px rgba(40,30,15,.45)}
 .gallery{display:grid;grid-template-columns:1.25fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px;margin-top:clamp(40px,5vw,60px)}
 .gallery div{min-height:0}
@@ -194,7 +197,7 @@ footer a{color:#C9C2B4;text-decoration:none}
 .js .rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
 .js .rv.in{opacity:1;transform:none}
 @media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
-@media(min-width:980px){.letter-grid{grid-template-columns:1fr 1fr;align-items:start}.letter-grid .video{position:sticky;top:30px}}
+@media(min-width:980px){.letter .cols{column-count:2;column-gap:64px;column-rule:1px solid #EFE7D8}.letter .cols>ul,.letter .cols>.mission-line,.letter .cols>.sig{break-inside:avoid}.letter .cols>p.lead-in{break-after:avoid}}
 @media(max-width:980px){
   .split,.network .split,.join-grid,.give-grid{grid-template-columns:1fr}
   .trio{grid-template-columns:1fr;max-width:560px;margin:0 auto}
@@ -252,17 +255,18 @@ footer a{color:#C9C2B4;text-decoration:none}
     <div class="head"><p class="eyebrow">A Word from Scott Brown</p><h2>Quiet, steady <em>obedience</em></h2></div>
     <div class="letter-grid">
       <div class="video rv">
-        <img src="assets/hero-worship.jpg" alt="">
-        <div class="play"><i></i><b>Quiet Faithfulness</b><small>Video goes here — waiting on the final video link</small></div>
+        <iframe src="https://www.youtube-nocookie.com/embed/i5P8Pa40avE?rel=0" title="Quiet Faithfulness — Church and Family Life" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
       <article class="letter rv">
         <p class="salute">Dear Friends,</p>
+        <div class="cols">
         <p>In a restless, noisy age, God calls His people to something better — quiet, steady obedience (1 Thess. 4:11).</p>
         <p>Not driven by:</p>
         <ul><li>Market trends</li><li>Social media posts</li><li>Or momentary applause . . .</li></ul>
         <p>But by faithful devotion in the home, the church, and daily work.</p>
         <p class="mission-line">This is the heartbeat of Church and Family Life’s mission: To Proclaim Quiet Faithfulness through the Sufficiency of Scripture.</p>
-        <p>Every book we publish, podcast we produce, and conference we host is fueled by this aim. We want to see:</p>
+        <p>Every book we publish, podcast we produce, and conference we host is fueled by this aim.</p>
+        <p class="lead-in">We want to see:</p>
         <ul>
           <li>Fathers daily reading the Scriptures to their children</li>
           <li>Families joyfully singing together</li>
@@ -275,6 +279,7 @@ footer a{color:#C9C2B4;text-decoration:none}
         <p>2026 was a remarkable year for advancing this mission. We invite you to review these recent milestones — along with our goals for 2027 — as you plan your year-end giving.</p>
         <p>Thank you for standing with us as we encourage churches and families to simply be faithful — and to trust God, over time, with the increase (Gal. 6:9).</p>
         <div class="sig"><p style="margin:0">Your brother in Christ,</p><img class="hand" src="assets/scott-brown-signature.png" alt="Scott Brown" width="908" height="163"><small>Church &amp; Family Life</small></div>
+        </div>
       </article>
     </div>
   </div>
@@ -311,7 +316,7 @@ footer a{color:#C9C2B4;text-decoration:none}
 <section class="panel">
   <div class="wrap">
     <div class="split">
-      <div class="banner rv"><img src="assets/manhood-womanhood.jpg" alt="Manhood and Womanhood: The Glory of God in the Creation Order" loading="lazy"></div>
+      <div class="banner rv"><a href="https://churchandfamilylife.com/resources/series/67b4e1315c300325385f8aeb"><img src="assets/manhood-womanhood.jpg" alt="Manhood and Womanhood: The Glory of God in the Creation Order" loading="lazy"></a></div>
       <div class="rv"><p class="eyebrow">2026 Family Conference</p><h2>Defending <em>God’s Good Design</em></h2>
         <p class="lede">In answer to today’s gender confusion, we defended biblical manhood and womanhood at our annual family conference in May, showing God’s glory in how He created “male and female” (Gen. 1:27).</p></div>
     </div>
@@ -364,7 +369,7 @@ footer a{color:#C9C2B4;text-decoration:none}
       <div class="conf-art rv"><a href="https://churchandfamilylife.com/events/69c40801815349696337c4c8"><img src="assets/cfl-conf-2027.png" alt="The Church and Family Life Conference, October 28–30, 2027: Inspiring the Quiet Faithful Christian Life" loading="lazy">
         <p>The Church and Family Life Conference<br><b style="color:#F4EEDF">October 28–30, 2027 &rarr;</b></p></a></div>
       <div class="rv">
-        <h3 style="margin-bottom:26px">More 2027 Events</h3>
+        <h3 style="margin-bottom:26px">2027 Events — Join Us in Person!</h3>
         <ul class="events">
           <li><div class="when"><b>Feb 12–13</b><span>Wake Forest, NC</span></div><div class="what"><small>Refocus Your Marriage</small><span><a href="https://churchandfamilylife.com/events/69e6c2d268482884d2448f85">Our Marriages and the Marriages of Our Sons &amp; Daughters</a></span></div></li>
           <li><div class="when"><b>Mar 12–13</b><span>Paoli, IN</span></div><div class="what"><small>Strengthen Your Family</small><span>Family Conference</span></div></li>
