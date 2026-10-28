@@ -83,12 +83,25 @@ h3{font-size:clamp(24px,2.4vw,30px)}
 .letter li::before,.truth li::before{content:"";position:absolute;left:4px;top:.62em;width:8px;height:8px;background:var(--gold);transform:rotate(45deg)}
 .letter .mission-line{border-left:3px solid var(--gold);padding:6px 0 6px 22px;margin:28px 0;font-size:22px;color:var(--navy);font-style:italic}
 .letter .sig{margin-top:30px}
-.letter .sig .hand{font-family:var(--script);font-size:44px;color:var(--navy);line-height:1;margin:6px 0 4px}
+.letter .sig .hand{width:min(250px,70%);height:auto;margin:12px 0 8px}
 .letter .sig small{font-family:var(--sans);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
 .head{max-width:820px;margin:0 auto clamp(44px,6vw,64px);text-align:center}
 .duo{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
 .card{margin:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(40,30,15,.4)}
 .card .ph{position:relative}
+.card a.art{display:block;transition:opacity .15s ease}
+.card a.art:hover{opacity:.9}
+.card a.art img{aspect-ratio:1200/630;height:auto}
+.card figcaption b a{color:inherit;text-decoration:none}
+.card figcaption b a::after{content:" \2192"}
+a.pod{text-decoration:none;color:inherit;transition:transform .15s ease}
+a.pod:hover{transform:translateY(-2px)}
+a.pod .listen{display:inline-block;font-family:var(--sans);font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-dk);margin-top:4px}
+.shelf .bk a{display:block;transition:transform .15s ease}
+.shelf .bk a:hover{transform:translateY(-3px)}
+.conf-art a{color:inherit;text-decoration:none;display:block}
+.events .what a{color:#F4EEDF;text-decoration:none;border-bottom:1px solid rgba(212,145,58,.6)}
+.events .what a:hover{color:var(--gold);border-bottom-color:var(--gold)}
 .card img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .card .ov{position:absolute;left:0;right:0;text-align:center;pointer-events:none}
 .card .ov.top{top:9%}
@@ -216,7 +229,7 @@ footer a{color:#C9C2B4;text-decoration:none}
   <div class="wrap">
     <p class="kicker">Church &amp; Family Life <span>|</span> 2026 Ministry Report</p>
     <hr class="rule">
-    <blockquote class="rv">“[A]spire to lead a quiet life, to mind your own business, and to work with your own hands.”<cite>1 THESSALONIANS 4:11</cite></blockquote>
+    <blockquote class="rv">“Aspire to lead a quiet life, to mind your own business, and to work with your own hands.”<cite>1 THESSALONIANS 4:11</cite></blockquote>
   </div>
 </section>
 
@@ -261,7 +274,7 @@ footer a{color:#C9C2B4;text-decoration:none}
         <p>Christians quietly doing the work God has put before them — day by day, year after year.</p>
         <p>2026 was a remarkable year for advancing this mission. We invite you to review these recent milestones — along with our goals for 2027 — as you plan your year-end giving.</p>
         <p>Thank you for standing with us as we encourage churches and families to simply be faithful — and to trust God, over time, with the increase (Gal. 6:9).</p>
-        <div class="sig"><p style="margin:0">Your brother in Christ,</p><div class="hand">Scott Brown</div><small>Church &amp; Family Life</small></div>
+        <div class="sig"><p style="margin:0">Your brother in Christ,</p><img class="hand" src="assets/scott-brown-signature.png" alt="Scott Brown" width="908" height="163"><small>Church &amp; Family Life</small></div>
       </article>
     </div>
   </div>
@@ -272,10 +285,10 @@ footer a{color:#C9C2B4;text-decoration:none}
     <div class="head"><p class="eyebrow">See How This Vision Is Bearing Fruit</p><h2>Recovering Worship <em>in the Home &amp; Church</em></h2>
       <p class="lede">This year, we launched two new campaigns to help dads and moms establish daily family worship in the home — and to equip families to worship together in the local church.</p></div>
     <div class="duo">
-      <figure class="card rv"><div class="ph"><img src="assets/we-worship-together.jpg" alt="We Worship Together: Go. Gather. Worship." loading="lazy"><div class="ov top"><b>We Worship Together</b><span>Go. Gather. Worship.</span></div></div>
-        <figcaption><b>We Worship Together</b><p class="quote">I love the sermon sheets . . . [as a resource] for [my boys] to get them more attentive during the sermon!” <cite>—Connor S.</cite></p></figcaption></figure>
-      <figure class="card rv"><div class="ph"><img src="assets/read-sing-pray.jpg" alt="Read. Sing. Pray. Restore family worship in the home" loading="lazy" style="object-position:center 70%"><div class="ov mid"><b>read. sing. pray.</b><span>Restore Family Worship in the Home</span></div></div>
-        <figcaption><b>Read. Sing. Pray.</b><p class="quote">It’s so nice to have everything, including the music, put together!” <cite>—Drew D.</cite></p></figcaption></figure>
+      <figure class="card rv"><a class="art" href="https://worshipasafamily.com/worship-together"><img src="assets/we-worship-together-art.jpg" alt="We Worship Together. Go. Gather. Worship. In the local church." loading="lazy" width="1200" height="630"></a>
+        <figcaption><b><a href="https://worshipasafamily.com/worship-together">We Worship Together</a></b><p class="quote">I love the sermon sheets . . . [as a resource] for [my boys] to get them more attentive during the sermon!” <cite>—Connor S.</cite></p></figcaption></figure>
+      <figure class="card rv"><a class="art" href="https://restorefamilyworship.com/restore-family-worship"><img src="assets/read-sing-pray-art.jpg" alt="read. sing. pray. Restore Family Worship in Your Home" loading="lazy" width="1200" height="630"></a>
+        <figcaption><b><a href="https://restorefamilyworship.com/restore-family-worship">Read. Sing. Pray.</a></b><p class="quote">It’s so nice to have everything, including the music, put together!” <cite>—Drew D.</cite></p></figcaption></figure>
     </div>
   </div>
 </section>
@@ -285,12 +298,12 @@ footer a{color:#C9C2B4;text-decoration:none}
     <div class="head"><p class="eyebrow">Podcasts</p><h2>Equipping Parents, <em>Believers, &amp; Churches</em></h2>
       <p class="lede">Through practical parenting advice and thoughtful engagement with today’s theological controversies, our podcasts equip Christians to shepherd their families and stand firm in a confused world.</p></div>
     <div class="trio">
-      <article class="pod rv"><img src="assets/pod-old-school.jpg" alt="Old School: A Parenting Podcast with Justin Miller" loading="lazy">
-        <div class="txt"><h3>Old School <span class="new">NEW</span></h3><p>Parenting is a high calling before God — but what should it look like in practice?</p><p>Join Justin Miller for practical, biblical encouragement on how to faithfully shepherd your children.</p></div></article>
-      <article class="pod rv"><img src="assets/pod-reasonable-response.jpg" alt="A Reasonable Response with Robert Bosley" loading="lazy">
-        <div class="txt"><h3>A Reasonable Response</h3><p>Can women be pastors? Is “eternal punishment” unjust? Are Catholics Christians?</p><p>Robert Bosley tackles these and other controversies, equipping believers to discern truth from error and defend the faith.</p></div></article>
-      <article class="pod rv"><img src="assets/pod-quiet-faithfulness.jpg" alt="Quiet Faithfulness with Adam Triplett" loading="lazy">
-        <div class="txt"><h3>Quiet Faithfulness <span class="new">NEW</span></h3><p>While the world prizes fame, God rewards faithfulness.</p><p>Join Adam Triplett to learn how to lead a quiet, faithful life — one that tends what is ours, labors honestly, and trusts God with the increase.</p></div></article>
+      <a class="pod rv" href="https://churchandfamilylife.com/podcasts/old-school"><img src="assets/pod-old-school.jpg" alt="Old School: A Parenting Podcast with Justin Miller" loading="lazy">
+        <div class="txt"><h3>Old School <span class="new">NEW</span></h3><p>Parenting is a high calling before God — but what should it look like in practice?</p><p>Join Justin Miller for practical, biblical encouragement on how to faithfully shepherd your children.</p><span class="listen">Listen &rarr;</span></div></a>
+      <a class="pod rv" href="https://churchandfamilylife.com/podcasts/a-reasonable-response"><img src="assets/pod-reasonable-response.jpg" alt="A Reasonable Response with Robert Bosley" loading="lazy">
+        <div class="txt"><h3>A Reasonable Response</h3><p>Can women be pastors? Is “eternal punishment” unjust? Are Catholics Christians?</p><p>Robert Bosley tackles these and other controversies, equipping believers to discern truth from error and defend the faith.</p><span class="listen">Listen &rarr;</span></div></a>
+      <a class="pod rv" href="https://churchandfamilylife.com/podcasts/quiet-faithfulness"><img src="assets/pod-quiet-faithfulness.jpg" alt="Quiet Faithfulness with Adam Triplett" loading="lazy">
+        <div class="txt"><h3>Quiet Faithfulness <span class="new">NEW</span></h3><p>While the world prizes fame, God rewards faithfulness.</p><p>Join Adam Triplett to learn how to lead a quiet, faithful life — one that tends what is ours, labors honestly, and trusts God with the increase.</p><span class="listen">Listen &rarr;</span></div></a>
     </div>
   </div>
 </section>
@@ -316,11 +329,11 @@ footer a{color:#C9C2B4;text-decoration:none}
     <div class="head"><p class="eyebrow">Books</p><h2>Encouraging Families <em>through Biblical Resources</em></h2>
       <p class="lede">Five new books, one enduring mission — strengthening families and churches through biblical truth! This year’s releases equip children, strengthen young men, and inspire fathers to lead.</p></div>
     <div class="shelf rv">
-      <div class="bk feat"><img src="assets/book-speed-of-sound.jpg" alt="Lessons Learned at the Speed of Sound" loading="lazy"><span>Lessons Learned at the Speed of Sound</span></div>
-      <div class="bk"><img src="assets/book-family-that-sings.png" alt="The Family That Sings" loading="lazy"><span>The Family That Sings</span></div>
-      <div class="bk"><img src="assets/book-what-is-a-family.png" alt="What Is a Family?" loading="lazy"><span>What Is a Family?</span></div>
-      <div class="bk"><img src="assets/book-man-your-post.jpg" alt="Man Your Post" loading="lazy"><span>Man Your Post</span></div>
-      <div class="bk"><img src="assets/book-urgent-call.png" alt="An Urgent Call to Young Men" loading="lazy"><span>An Urgent Call to Young Men</span></div>
+      <div class="bk feat"><a href="https://churchandfamilylife.com/products/698f584179a972d7cf70c810"><img src="assets/book-speed-of-sound.jpg" alt="Lessons Learned at the Speed of Sound" loading="lazy"></a><span>Lessons Learned at the Speed of Sound</span></div>
+      <div class="bk"><a href="https://churchandfamilylife.com/products/69b30dbf6a8daf78584b4538"><img src="assets/book-family-that-sings.png" alt="The Family That Sings" loading="lazy"></a><span>The Family That Sings</span></div>
+      <div class="bk"><a href="https://churchandfamilylife.com/products/6973b861ab5aa8835b29a543"><img src="assets/book-what-is-a-family.png" alt="What Is a Family?" loading="lazy"></a><span>What Is a Family?</span></div>
+      <div class="bk"><a href="https://churchandfamilylife.com/products/6ac6570d68c8897ef2d80484"><img src="assets/book-man-your-post.jpg" alt="Man Your Post" loading="lazy"></a><span>Man Your Post</span></div>
+      <div class="bk"><a href="https://churchandfamilylife.com/products/69b307e6d7d5f5eb629b8487"><img src="assets/book-urgent-call.png" alt="An Urgent Call to Young Men" loading="lazy"></a><span>An Urgent Call to Young Men</span></div>
     </div>
     <div class="featured rv">
       <div class="num"><b>40</b><span>devotionals</span><small>Buy the book or get<br>the Apple or Android app</small></div>
@@ -348,16 +361,16 @@ footer a{color:#C9C2B4;text-decoration:none}
     <div class="head"><p class="eyebrow" style="color:var(--gold)">Join Us in 2027</p><h2>Don’t Chase Viral, <em>Build What Lasts</em></h2>
       <p class="lede" style="color:#CFD3C4">Faithfulness doesn’t make headlines — but it changes everything. In a restless, noisy age, God calls His people to something better: quiet, steady obedience (1 Thess. 4:11).</p></div>
     <div class="join-grid">
-      <div class="conf-art rv"><img src="assets/cfl-conf-2027.png" alt="The Church and Family Life Conference, October 28–30, 2027: Inspiring the Quiet Faithful Christian Life" loading="lazy">
-        <p>The Church and Family Life Conference<br><b style="color:#F4EEDF">October 28–30, 2027</b></p></div>
+      <div class="conf-art rv"><a href="https://churchandfamilylife.com/events/69c40801815349696337c4c8"><img src="assets/cfl-conf-2027.png" alt="The Church and Family Life Conference, October 28–30, 2027: Inspiring the Quiet Faithful Christian Life" loading="lazy">
+        <p>The Church and Family Life Conference<br><b style="color:#F4EEDF">October 28–30, 2027 &rarr;</b></p></a></div>
       <div class="rv">
         <h3 style="margin-bottom:26px">More 2027 Events</h3>
         <ul class="events">
-          <li><div class="when"><b>Feb 12–13</b><span>Wake Forest, NC</span></div><div class="what"><small>Refocus Your Marriage</small><span>Our Marriages and the Marriages of Our Sons &amp; Daughters</span></div></li>
+          <li><div class="when"><b>Feb 12–13</b><span>Wake Forest, NC</span></div><div class="what"><small>Refocus Your Marriage</small><span><a href="https://churchandfamilylife.com/events/69e6c2d268482884d2448f85">Our Marriages and the Marriages of Our Sons &amp; Daughters</a></span></div></li>
           <li><div class="when"><b>Mar 12–13</b><span>Paoli, IN</span></div><div class="what"><small>Strengthen Your Family</small><span>Family Conference</span></div></li>
-          <li><div class="when"><b>Apr 5–9</b><span>Cincinnati, OH</span></div><div class="what"><small>Defend the Faith</small><span>The Faith We Confess</span><em>350 Years of the 2nd LBCF</em></div></li>
+          <li><div class="when"><b>Apr 5–9</b><span>Cincinnati, OH</span></div><div class="what"><small>Defend the Faith</small><span><a href="https://faithweconfess.com">The Faith We Confess</a></span><em>350 Years of the 2nd LBCF</em></div></li>
           <li><div class="when"><b>Jul 16–17</b><span>Bainbridge, GA</span></div><div class="what"><small>Strengthen Your Family</small><span>Family Conference</span></div></li>
-          <li><div class="when"><b>Oct 27–28</b><span>Ridgecrest, NC</span></div><div class="what"><small>Be Mobilized as a Single</small><span>Holiness to the Lord: A Singles Conference</span></div></li>
+          <li><div class="when"><b>Oct 27–28</b><span>Ridgecrest, NC</span></div><div class="what"><small>Be Mobilized as a Single</small><span><a href="https://churchandfamilylife.com/events/69f35df2b8da35927a997171">Holiness to the Lord: A Singles Conference</a></span></div></li>
           <li><div class="when"><b>Dates TBD</b><span>Wake Forest, NC</span></div><div class="what"><small>Build Up Your Sons &amp; Daughters</small><span>Father Son &amp; Father Daughter Retreats</span></div></li>
         </ul>
         <div class="join-cta"><a class="btn btn-gold" href="https://cf.life/events">Sign Up Now</a><i>More to come — stay tuned!</i></div>
